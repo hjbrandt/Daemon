@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vitepress dev cms",
     "build": "vitepress build cms",
-    "preview": "vitepress preview cms"
+    "preview": "vitepress preview cms",
+    "cf:build": "vitepress build cms && cf-wrangler build",
+    "cf:dry-run": "cf deploy --prebuilt --dry-run",
+    "cf:deploy": "cf deploy --prebuilt"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260721.1",
@@ -17,7 +20,9 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.12",
     "vitepress": "^1.6.4",
-    "vue": "^3.5.19"
+    "vue": "^3.5.19",
+    "cf": "1.0.0-beta.27",
+    "wrangler": "4.147.0"
   },
   "peerDependencies": {
     "typescript": "^5"

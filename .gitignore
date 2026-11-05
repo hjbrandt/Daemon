@@ -35,3 +35,10 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # Personal daemon data (injected at build time from private repo)
 cms/public/daemon-data.json
+
+# Instance files copied in at build time by the private deploy script; never committed here
+cloudflare.config.ts
+.wrangler/
+cms/.vitepress/dist
+cms/.vitepress/cache
+.cloudflare/
